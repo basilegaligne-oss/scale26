@@ -398,7 +398,57 @@
     .calc-result { position: relative; top: 0; }
     .nav-links a:not(.btn) { display: none; }
     .about-photo { max-width: 320px; }
-    .hero .audit-card { margin-top: 16px; }
+    .hero .audit-card { margin-top: 16px; max-width: 100%; }
+    .case-grid { gap: 16px; }
+    /* trust logos — scale down for tablet */
+    .trust-row { justify-content: center; gap: clamp(20px, 5vw, 40px) clamp(22px, 6vw, 44px); }
+    .trust-logo-atlas { height: 54px; }
+    .trust-logo-gng { height: 96px; }
+    .trust-logo-sprinter { height: 72px; }
+    .trust-logo-cb { height: 60px; }
+    .trust-logo-intertek { height: 48px; }
+  }
+
+  @media (max-width: 600px) {
+    /* tighter hero rhythm */
+    .hero h1 { margin-top: 16px; }
+    .hero .lede { margin-top: 18px; }
+    .hero-cta { margin-top: 24px; max-width: 100%; }
+    .hero-cta-row { flex-direction: column; }
+    .hero-cta-row .btn { width: 100%; }
+    .audit-card { padding: 22px 20px; }
+
+    /* stack stats single column */
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat { border-top: 1px solid var(--line); padding-top: 20px; }
+    .stat:first-child { border-top: none; padding-top: 0; }
+
+    /* buttons never overflow on small phones */
+    .method-cta { margin-top: 56px; }
+    .method-cta .btn { min-width: 0; width: 100%; padding: 16px 22px; }
+    .final-row { flex-direction: column; }
+    .final-row .btn { width: 100%; min-width: 0; }
+    .calc-result { padding: 26px 22px; }
+
+    /* card padding trim */
+    .case-card { padding: 24px; }
+    .step-card { padding: 24px; }
+    .faq-item { padding: 18px 20px; }
+
+    /* trust logos — phone sizes, wrap to a clean grid */
+    .trust .wrap { padding: 0 20px; }
+    .trust-row { gap: 22px 26px; }
+    .trust-logo-atlas { height: 40px; }
+    .trust-logo-gng { height: 66px; }
+    .trust-logo-sprinter { height: 50px; }
+    .trust-logo-cb { height: 44px; }
+    .trust-logo-intertek { height: 34px; }
+
+    /* nav: keep logo + CTA tidy */
+    .nav .wrap { padding: 12px 20px; }
+    .logo-word { font-size: 25px; }
+    .logo-bars { height: 28px; }
+    .logo-bars i:nth-child(4) { height: 28px; }
   }
 
   [data-section].hidden-section { display: none; }
